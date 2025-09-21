@@ -1,0 +1,118 @@
+{
+  "model_info": {
+    "n_states": 2,
+    "ticker": "AAPL",
+    "data_points": 2514,
+    "date_range": "2015-09-22 to 2025-09-19"
+  },
+  "state_analysis": [
+    {
+      "State": 0,
+      "Count": 1748,
+      "Percentage": 69.53062848050915,
+      "Mean_Return": 0.0015864193965335106,
+      "Std_Return": 0.01139524087128122,
+      "Volatility_Annualized": 0.1808938408505346,
+      "Min_Return": -0.04085746644691468,
+      "Max_Return": 0.04692693301662776,
+      "Skewness": -0.03107434721908611,
+      "Kurtosis": 0.6350652291231973,
+      "VaR_5%": -0.01776814909104151,
+      "VaR_1%": -0.02712770282875672
+    },
+    {
+      "State": 1,
+      "Count": 766,
+      "Percentage": 30.46937151949085,
+      "Mean_Return": -0.0002931525799218069,
+      "Std_Return": 0.02533683167636321,
+      "Volatility_Annualized": 0.40220973375576485,
+      "Min_Return": -0.054074637351346266,
+      "Max_Return": 0.05620216642251698,
+      "Skewness": 0.044919762093221356,
+      "Kurtosis": -0.40817041846428737,
+      "VaR_5%": -0.042402199398860474,
+      "VaR_1%": -0.054074637351346266
+    }
+  ],
+  "state_interpretations": {
+    "0": {
+      "regime_type": "Low Volatility",
+      "market_condition": "Bull Market",
+      "volatility": 0.1808938408505346,
+      "mean_return": 0.0015864193965335106,
+      "description": "Period of moderate volatility with modest positive returns"
+    },
+    "1": {
+      "regime_type": "Medium Volatility",
+      "market_condition": "Neutral Market",
+      "volatility": 0.40220973375576485,
+      "mean_return": -0.0002931525799218069,
+      "description": "Period of extreme volatility with neutral returns"
+    }
+  },
+  "transition_analysis": {
+    "most_persistent_state": {
+      "state": "0",
+      "persistence": 0.9538187397791432,
+      "regime": "Low Volatility"
+    },
+    "persistence_by_state": [
+      {
+        "state": 0,
+        "persistence": 0.9538187397791432,
+        "regime": "Low Volatility"
+      },
+      {
+        "state": 1,
+        "persistence": 0.914045163247882,
+        "regime": "Medium Volatility"
+      }
+    ],
+    "top_transitions": [
+      {
+        "from_state": 1,
+        "to_state": 0,
+        "probability": 0.08595483675211808,
+        "from_regime": "Medium Volatility",
+        "to_regime": "Low Volatility"
+      },
+      {
+        "from_state": 0,
+        "to_state": 1,
+        "probability": 0.046181260220856855,
+        "from_regime": "Low Volatility",
+        "to_regime": "Medium Volatility"
+      }
+    ]
+  },
+  "market_insights": [
+    "State 1 represents a high-risk period with 40.2% annualized volatility, occurring 30.5% of the time.",
+    "The most profitable regime is State 0 (Low Volatility) with 40.0% annualized returns.",
+    "The market spends most time (69.5%) in State 0 (Low Volatility)."
+  ],
+  "risk_analysis": {
+    "state_var_analysis": [
+      {
+        "state": 0,
+        "var_5%": -0.01776814909104151,
+        "var_1%": -0.02712770282875672,
+        "volatility": 0.1808938408505346,
+        "max_drawdown": -0.04085746644691468
+      },
+      {
+        "state": 1,
+        "var_5%": -0.042402199398860474,
+        "var_1%": -0.054074637351346266,
+        "volatility": 0.40220973375576485,
+        "max_drawdown": -0.054074637351346266
+      }
+    ],
+    "portfolio_metrics": {
+      "overall_var_5%": -0.027947482362813972,
+      "overall_var_1%": -0.04814793975800845,
+      "overall_volatility": 0.26876000378111287,
+      "sharpe_ratio": 0.9505092077500197
+    }
+  }
+}
